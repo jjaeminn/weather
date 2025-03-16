@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국 도시 날씨 정보</title>
+    <link rel="stylesheet" type="text/css" href = "style.css">
+</head>
+<body>
+    <h1>한국 도시 날씨 정보</h1>
+    
+    <div class="city-buttons">
+        <button onclick="getWeather('Seoul')">서울</button>
+        <button onclick="getWeather('Busan')">부산</button>
+        <button onclick="getWeather('Incheon')">인천</button>
+        <button onclick="getWeather('Daegu')">대구</button>
+        <button onclick="getWeather('Daejeon')">대전</button>
+        <button onclick="getWeather('Gwangju')">광주</button>
+        <button onclick="getWeather('Ulsan')">울산</button>
+        <button onclick="getWeather('Sejong')">세종</button>
+        <button onclick="getWeather('Jeju')">제주</button>
+    </div>
+    
+    <div class="loading" id="loading">날씨 정보를 불러오는 중...</div>
+    <div class="error" id="error">날씨 정보를 불러오는데 문제가 발생했습니다.</div>
+    
+    <div class="weather-container" id="weatherContainer">
+        <div class="weather-header">
+            <div class="city-name" id="cityName">도시명</div>
+            <img id="weatherIcon" class="weather-icon" src="" alt="날씨 아이콘">
+        </div>
+        <div class="temp" id="temp">-°C</div>
+        <div class="description" id="description">날씨 설명</div>
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-label">체감 온도</span>
+                <span class="detail-value" id="feelsLike">-°C</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">습도</span>
+                <span class="detail-value" id="humidity">-%</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">풍속</span>
+                <span class="detail-value" id="windSpeed">- m/s</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">기압</span>
+                <span class="detail-value" id="pressure">- hPa</span>
+            </div>
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
